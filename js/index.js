@@ -1,13 +1,11 @@
-'use strict';
-
-const render = (root) => {
+var render = (root) => {
   root.empty();
-  const wrapper = $('<div class="wrapper"></div>');
+  var wrapper = $('<div class="wrapper"></div>');
   wrapper.append(Header(_ => render(root)));
   root.append(wrapper);
 }
 
-const state = {
+var state = {
   stations: null,
   selectedStation: null
 };
@@ -20,7 +18,7 @@ $( _ => {
 
     state.stations = json;
 
-    const root = $('.root');
+    var root = $('.root');
     render(root);
   });
 

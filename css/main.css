@@ -17,3 +17,8 @@ header {
 header .fa-chevron-left {
   margin-right: 16px;
 }
+
+input[type="text"] {
+  background-color: transparent;
+  border: none;
+}
