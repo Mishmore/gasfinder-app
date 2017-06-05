@@ -1,0 +1,29 @@
+[{
+  "name": "Acosa",
+  "address": "Av. Elmer Faucett 390",
+  "district": "San Miguel",
+  "lat": -12.0677349,
+  "long": -77.0967019,
+  "products": [86,90,95,97]
+},{
+  "name": "Grifo PECSA",
+  "address": "Av. La Marina 405",
+  "district": "La Perla",
+  "lat": -12.0671961,
+  "long": -77.1178952,
+  "products": [90,95,97]
+},{
+  "name": "El carmelo",
+  "address": "Av Sánchez Carrion 471",
+  "district": "Jesús María",
+  "lat": -12.0870742,
+  "long": -77.0352733,
+  "products": [90,95]
+},{
+  "name": "Gasolinas de america",
+  "address": "Petit thouars 3305 - 3307",
+  "district": "San Isidro",
+  "lat": -12.0956306,
+  "long": -77.0321242,
+  "products": [86,90,95,97]
+}]
