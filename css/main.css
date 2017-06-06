@@ -8,17 +8,25 @@
 header {
   color: #fff;
   font-size: 18px;
-  height: 56px;
-  line-height: 56px;
-  padding-left: 16px;
+  /*line-height: 56px;*/
   background-color: #F44336;
+  padding: 10px 0 1px 0;
 }
 
-header .fa-chevron-left {
-  margin-right: 16px;
+header .fa-search {
+  margin-left: 16px;
+  color: rgb(145, 145, 145);
+  transform: translateY(60%);
 }
 
-input[type="text"] {
+header input[type="text"] {
   background-color: transparent;
   border: none;
+  margin: 0;
+  margin-left: 16px;
+}
+
+.form-group {
+  background-color: #fff;
+  margin-top: 10px;
 }
