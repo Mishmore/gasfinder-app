@@ -40,6 +40,15 @@ input[type=text]:focus:not([readonly]) {
   margin: 0;
 }
 
+.search-text {
+  width: 90%;
+}
+
+.search-item {
+  display: flex;
+  align-items: center;
+}
+
 .search-item h6 {
   font-weight: 600;
   font-size: 1.2rem;
