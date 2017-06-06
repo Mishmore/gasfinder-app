@@ -1,5 +1,3 @@
-'use strict';
-
-const filterByDistrict = (stations,query) => {
-
+var filterByDistrict = (stations,query) => {
+  
 }
