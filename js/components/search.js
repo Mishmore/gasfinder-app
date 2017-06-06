@@ -1,3 +1,5 @@
+var stationsFounded;
+
 var Search = (update) => {
   var search = $('<div class="search"></div>');
   var container = $('<div class="container"></div>');
@@ -15,8 +17,9 @@ var Search = (update) => {
   formGroup.append(input);
 
   input.on("keyup", (e) => {
-    var x = filterByDistrict(state.stations,input.val());
-    console.log(x);
+    stationsFounded = filterByDistrict(state.stations,input.val());
+    console.log(stationsFounded);
+    itemsContainer(update);
   });
 
   return search;
@@ -41,7 +44,7 @@ var stationItem = (station, update) => {
 
 var itemsContainer = (update) => {
   var container = $('<div class="collection"></div>');
-  state.stations.forEach((station) => {
+  stationsFounded.forEach((station) => {
     container.append(stationItem(station,update));
   });
 
