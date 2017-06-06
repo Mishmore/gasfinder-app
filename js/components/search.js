@@ -1,4 +1,3 @@
-// <i class="fa fa-map" aria-hidden="true"></i>
 var Search = (update) => {
   var container = $('<div class="collection"></div>');
   var divSearch = $('<div class="search-item collection-item grey-text text-darken-1"></div>');

@@ -4,16 +4,22 @@ var Header = (update) => {
   var row = $('<div class="row"></div>');
   var col = $('<div class="col s12"></div>')
   var title = $('<span>Gas Finder</span>');
-  var formGroup = $('<div class="form-group z-depth-1 col s12"></div>');
-  var icon = $('<i class="fa fa-search col s1" aria-hidden="true"></i>');
-  var input = $('<input type="text" class="col s11 col m11" placeholder="Ingresa tu distrito a buscar">');
+  var nav = $('<nav></nav>');
+  var navWrapper = $('<div class="nav-wrapper"></div>');
+  var form = $('<form></form>');
+  var formGroup = $('<div class="input-field"></div>');
+  var label = $('<label class="label-icon" for="search"><i class="fa fa-search grey-text text-darken"></i></label>');
+  var input = $('<input type="search" id="search" placeholder="Ingresa tu distrito a buscar">');
 
   header.append(container);
   container.append(row);
   row.append(col);
   col.append(title);
-  col.append(formGroup);
-  formGroup.append(icon);
+  col.append(nav);
+  nav.append(navWrapper);
+  navWrapper.append(form);
+  form.append(formGroup);
+  formGroup.append(label);
   formGroup.append(input);
 
   return header;
