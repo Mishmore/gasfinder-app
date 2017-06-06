@@ -4,7 +4,7 @@ var Header = (update) => {
   var row = $('<div class="row"></div>');
   var col = $('<div class="col s12"></div>')
   var title = $('<span>Gas Finder</span>');
-  var nav = $('<nav></nav>');
+  var navbar = $('<nav></nav>');
   var navWrapper = $('<div class="nav-wrapper"></div>');
   var form = $('<form></form>');
   var formGroup = $('<div class="input-field"></div>');
@@ -15,8 +15,8 @@ var Header = (update) => {
   container.append(row);
   row.append(col);
   col.append(title);
-  col.append(nav);
-  nav.append(navWrapper);
+  col.append(navbar);
+  navbar.append(navWrapper);
   navWrapper.append(form);
   form.append(formGroup);
   formGroup.append(label);
