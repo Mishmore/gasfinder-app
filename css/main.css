@@ -9,16 +9,21 @@ header {
   color: #fff;
   font-size: 18px;
   background-color: #F44336;
-  padding: 10px 0 1px 0;
+  padding: 10px 0 1px 20px;
 }
 
-header .fa-search {
+.search {
+  background-color: #f44336;
+  padding-bottom: 1px;
+}
+
+.fa-search {
   margin-left: 16px;
   color: rgb(145, 145, 145);
-  transform: translateY(60%);
+  transform: translateY(90%);
 }
 
-header input[type="text"] {
+input[type="text"] {
   background-color: transparent;
   border: none;
   margin: 0;
@@ -61,6 +66,6 @@ input[type=text]:focus:not([readonly]) {
 }
 
 #map {
-  width: 400px;
+  width: 100%x;
   height: 400px;
 }
