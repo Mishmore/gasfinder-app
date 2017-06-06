@@ -35,3 +35,13 @@ input[type=text]:focus:not([readonly]) {
   background-color: #fff;
   margin-top: 10px;
 }
+
+.collection {
+  margin: 0;
+}
+
+.search-item h6 {
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin: 0;
+}

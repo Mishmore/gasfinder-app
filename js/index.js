@@ -2,6 +2,7 @@ var render = (root) => {
   root.empty();
   var wrapper = $('<div class="wrapper"></div>');
   wrapper.append(Header(_ => render(root)));
+  wrapper.append(Search(_ => render(root)));
   root.append(wrapper);
 }
 
