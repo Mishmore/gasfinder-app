@@ -24,6 +24,12 @@ header input[type="text"] {
   border: none;
   margin: 0;
   margin-left: 16px;
+  color: #000;
+}
+
+input[type=text]:focus:not([readonly]) {
+  border-bottom: none;
+  box-shadow: none;
 }
 
 .form-group {

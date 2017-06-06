@@ -1,9 +1,6 @@
-'use strict';
+var getJSON = (url, cb) => {
 
-
-const getJSON = (url, cb) => {
-
-  const xhr = new XMLHttpRequest();
+  var xhr = new XMLHttpRequest();
 
   xhr.addEventListener('load', () => {
 
