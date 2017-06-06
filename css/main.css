@@ -47,10 +47,15 @@ input[type=text]:focus:not([readonly]) {
 .search-item {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .search-item h6 {
   font-weight: 600;
   font-size: 1.2rem;
   margin: 0;
+}
+
+.search-item i {
+  cursor: pointer;
 }
