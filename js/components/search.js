@@ -18,13 +18,12 @@ var Search = (update) => {
 
   input.on("keyup", (e) => {
     var stationsFounded = filterByDistrict(state.stations,input.val());
-    console.log(stationsFounded);
     reRender(collection, stationsFounded);
   });
 
   var collection = $('<div class="collection"></div>');
   state.stations.forEach((station) => {
-    collection.append(stationItem(station));
+    collection.append(stationItem(station, update));
     return collection;
   });
 
@@ -33,7 +32,7 @@ var Search = (update) => {
 }
 
 
-var stationItem = (station) => {
+var stationItem = (station, update) => {
   var divSearch = $('<div class="search-item collection-item grey-text text-darken-1"></div>');
   var searchText = $('<div class="search-text"></div>');
   var title = $('<h6 class="black-text">'+ station.name +'</h6>');
@@ -46,6 +45,11 @@ var stationItem = (station) => {
   searchText.append(direccion);
   searchText.append(distrito);
   divSearch.append(map);
+
+  map.on('click',(e) => {
+    state.selectedStation = station;
+    update();
+  });
 
   return divSearch;
 }
