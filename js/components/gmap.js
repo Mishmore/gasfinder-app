@@ -1,4 +1,6 @@
 var map;
+var posLat;
+var posLong;
 
 var init = function() {
   map = new GMaps({
@@ -10,9 +12,40 @@ var init = function() {
   map.addMarker({
     lat: state.selectedStation.lat,
     lng: state.selectedStation.long,
-    title: 'Lima'
+    title: state.selectedStation.name
   });
 
+  /*
+  map.drawRoute({
+  origin: [-12.044012922866312, -77.02470665341184],
+  destination: [-12.090814532191756, -77.02271108990476],
+  travelMode: 'driving',
+  strokeColor: '#131540',
+  strokeOpacity: 0.6,
+  strokeWeight: 6
+});
+  */
+  GMaps.geolocate({
+    success: function(position) {
+      //map.setCenter(position.coords.latitude, position.coords.longitude);
+
+      map.addMarker({
+        lat: position.coords.latitude,
+        lng: position.coords.longitude,
+        title: 'tu ubicacion'
+      });
+
+    },
+    error: function(error) {
+      alert('Geolocation failed: '+error.message);
+    },
+    not_supported: function() {
+      alert("Your browser does not support geolocation");
+    },
+    always: function() {
+      alert("Aleja el zoom");
+    }
+  });
 
 
 }
@@ -22,18 +55,3 @@ var Gmap = () => {
   wrapper.init = init.bind(null,wrapper.get(0));
   return wrapper;
 }
-
-GMaps.geolocate({
-  success: function(position) {
-    map.setCenter(position.coords.latitude, position.coords.longitude);
-  },
-  error: function(error) {
-    alert('Geolocation failed: '+error.message);
-  },
-  not_supported: function() {
-    alert("Your browser does not support geolocation");
-  },
-  always: function() {
-    alert("Done!");
-  }
-});
