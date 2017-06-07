@@ -18,6 +18,7 @@ var Search = (update) => {
 
   input.on("keyup", (e) => {
     var stationsFounded = filterByDistrict(state.stations,input.val());
+    console.log(stationsFounded);
     reRender(collection, stationsFounded);
   });
 
@@ -48,6 +49,7 @@ var stationItem = (station, update) => {
 
   map.on('click',(e) => {
     state.selectedStation = station;
+    console.log(state.selectedStation);
     update();
   });
 

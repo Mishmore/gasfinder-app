@@ -1,6 +1,6 @@
 var map;
 
-var init =function(parent) {
+var init =function() {
   map = new GMaps({
     el: '#map',
     lat: -12.043333,

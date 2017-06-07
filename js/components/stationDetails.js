@@ -5,5 +5,12 @@ var StationDetails = (update) => {
 
   container.append(regresar);
   container.append(map);
+
+  regresar.on('click',(e) => {
+    e.preventDefault();
+    state.selectedStation = null;
+    update();
+  })
+
   return container;
 }

@@ -19,6 +19,7 @@ var render = (root) => {
   }
 
   root.append(wrapper);
+
   var gmap = Gmap();
   gmap.init();
 
