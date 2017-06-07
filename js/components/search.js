@@ -1,7 +1,7 @@
 var Search = (update) => {
   var parent = $('<div></div>');
   var search = $('<div class="search"></div>');
-  var container = $('<div class="container"></div>');
+  var container = $('<div class="container-fluid"></div>');
   var row = $('<div class="row"></div>');
   var col = $('<div class="col s12 header-col"></div>');
   var formGroup = $('<div class="form-group z-depth-1 col s12"></div>');
