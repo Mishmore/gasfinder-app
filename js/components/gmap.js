@@ -15,19 +15,16 @@ var init = function() {
     title: state.selectedStation.name
   });
 
-  /*
-  map.drawRoute({
-  origin: [-12.044012922866312, -77.02470665341184],
-  destination: [-12.090814532191756, -77.02271108990476],
-  travelMode: 'driving',
-  strokeColor: '#131540',
-  strokeOpacity: 0.6,
-  strokeWeight: 6
-});
-  */
   GMaps.geolocate({
     success: function(position) {
-      //map.setCenter(position.coords.latitude, position.coords.longitude);
+      map.drawRoute({
+        origin: [position.coords.latitude, position.coords.longitude],
+        destination: [state.selectedStation.lat, state.selectedStation.long],
+        travelMode: 'driving',
+        strokeColor: '#131540',
+        strokeOpacity: 0.6,
+        strokeWeight: 6
+      });
 
       map.addMarker({
         lat: position.coords.latitude,
@@ -46,7 +43,6 @@ var init = function() {
       alert("Aleja el zoom");
     }
   });
-
 
 }
 
