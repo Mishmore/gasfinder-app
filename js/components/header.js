@@ -1,6 +1,6 @@
 var Header = (update) => {
   var header = $("<header></header>");
-  var title = $('<span>Gas Finder</span>');
+  var title = $('<span id="title">Gas Finder</span>');
 
   header.append(title);
 
