@@ -39,7 +39,7 @@ var stationItem = (station, update) => {
   var title = $('<h6 class="black-text">'+ station.name +'</h6>');
   var direccion = $('<p>' + station.address + '</p>');
   var distrito = $('<p>' + station.district + '</p>');
-  var map = $('<i class="fa fa-map grey-text text-darken" aria-hidden="true"></i>');
+  var map = $('<i class="fa fa-map grey-text text-darken mapa" aria-hidden="true"></i>');
 
   divSearch.append(searchText);
   searchText.append(title);

@@ -1,15 +1,15 @@
 var map;
 
-var init =function() {
+var init = function() {
   map = new GMaps({
     el: '#map',
-    lat: -12.043333,
-    lng: -77.028333
+    lat: state.selectedStation.lat,
+    lng: state.selectedStation.long
   });
 
   map.addMarker({
-    lat: -12.043333,
-    lng: -77.03,
+    lat: state.selectedStation.lat,
+    lng: state.selectedStation.long,
     title: 'Lima'
   });
 
