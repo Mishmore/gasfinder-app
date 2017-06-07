@@ -1,6 +1,7 @@
 var render = (root) => {
   root.empty();
   var wrapper = $('<div class="wrapper"></div>');
+  wrapper.append(Header(_ => render(root)));
 
   /*
   wrapper.append(Header(_ => render(root)));
@@ -12,7 +13,6 @@ var render = (root) => {
   */
 
   if (state.selectedStation == null) {
-      wrapper.append(Header(_ => render(root)));
       wrapper.append(Search(_ => render(root)));
   } else {
     wrapper.append(StationDetails(_ => render(root)));

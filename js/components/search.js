@@ -19,7 +19,7 @@ var Search = (update) => {
   input.on("keyup", (e) => {
     var stationsFounded = filterByDistrict(state.stations,input.val());
     console.log(stationsFounded);
-    reRender(collection, stationsFounded);
+    reRender(collection, stationsFounded, update);
   });
 
   var collection = $('<div class="collection"></div>');
@@ -56,9 +56,9 @@ var stationItem = (station, update) => {
   return divSearch;
 }
 
-var reRender = (collection, stationsFounded) => {
+var reRender = (collection, stationsFounded, update) => {
   collection.empty();
   stationsFounded.forEach((station) => {
-    collection.append(stationItem(station,_ => { reRender(collection, stationsFounded) }));
+    collection.append(stationItem(station,update));
   })
 }

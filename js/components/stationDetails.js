@@ -10,7 +10,9 @@ var StationDetails = (update) => {
     e.preventDefault();
     state.selectedStation = null;
     update();
-  })
+  });
+
+  
 
   return container;
 }
