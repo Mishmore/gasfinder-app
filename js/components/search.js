@@ -1,5 +1,3 @@
-var stationsFounded;
-
 var Search = (update) => {
   var parent = $('<div></div>');
   var search = $('<div class="search"></div>');
@@ -19,21 +17,21 @@ var Search = (update) => {
   formGroup.append(input);
 
   input.on("keyup", (e) => {
-    stationsFounded = filterByDistrict(state.stations,input.val());
+    var stationsFounded = filterByDistrict(state.stations,input.val());
     console.log(stationsFounded);
-    itemsContainer();
+    reRender(collection, stationsFounded);
   });
 
   var collection = $('<div class="collection"></div>');
   state.stations.forEach((station) => {
     collection.append(stationItem(station));
-
     return collection;
   });
 
   parent.append(collection);
   return parent;
 }
+
 
 var stationItem = (station) => {
   var divSearch = $('<div class="search-item collection-item grey-text text-darken-1"></div>');
@@ -50,4 +48,11 @@ var stationItem = (station) => {
   divSearch.append(map);
 
   return divSearch;
+}
+
+var reRender = (collection, stationsFounded) => {
+  collection.empty();
+  stationsFounded.forEach((station) => {
+    collection.append(stationItem(station,_ => { reRender(collection, stationsFounded) }));
+  })
 }
