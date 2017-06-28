@@ -12,7 +12,7 @@ La aplicación consta de 2 pantallas:
 
 La aplicación está diseñada exclusivamente para celulares modernos por lo que se espera un diseño responsive entre 400px a 1024px, todo el contenido debe ajustarse a estas dimensiones.
 
-Revisa el demo aquí https://mishmore.github.io/gasfinder-app/ [https://mishmore.github.io/gasfinder-app/]
+Revisa el demo aquí [https://mishmore.github.io/gasfinder-app/](https://mishmore.github.io/gasfinder-app/)
 
 ## Objetivos
 
